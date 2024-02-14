@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import EventList from "@/components/events/event-list";
 import { getFeaturedEvents } from "@/services/api-util";
+import NewsletterRegistration from '@/components/input/newsletter-registration';
 /* import { getFeaturedEvents } from "@/dummy-data"; */
 
 function HomePage (props) {
@@ -13,6 +14,7 @@ function HomePage (props) {
                 <title>Next Js Events App</title>
                 <meta name='description' content='A next js app'/>
             </Head>
+            <NewsletterRegistration />
             <EventList items={props.events} />
         </div>
     )
